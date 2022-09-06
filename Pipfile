@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 django = "==3.1"
 eqator = "*"
+environs = "*"
+garpix-package = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
