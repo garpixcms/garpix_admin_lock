@@ -75,7 +75,7 @@ Add `PageLockViewMixin` in models
 ```python
 # example/models.py
 from django.db import models
-from admin_page_lock.mixins import PageLockViewMixin
+from garpix_admin_lock.mixins import PageLockViewMixin
 
 
 class ExampleLock(PageLockViewMixin, models.Model):
@@ -86,7 +86,7 @@ Add `PageLockAdminMixin` in admin
 
 ```python
 # example/admin.py
-from admin_page_lock.mixins import PageLockAdminMixin
+from garpix_admin_lock.mixins import PageLockAdminMixin
 from django.contrib import admin
 from .models import Example
 
