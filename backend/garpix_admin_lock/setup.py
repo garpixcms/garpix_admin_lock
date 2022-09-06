@@ -1,17 +1,17 @@
 from setuptools import setup, find_packages
 from os import path
-from m2r import convert
-from django.conf import settings
 
+here = path.join(path.abspath(path.dirname(__file__)), 'garpix_admin_lock')
 
-with open(path.join(settings.BASE_DIR, '..', 'README.md'), encoding='utf-8') as f:
-    long_description = convert(f.read())
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name='garpix_admin_lock',
     version='1.0.0',
     description='',
     long_description=long_description,
+    long_description_content_type='text/markdown',
     url='https://github.com/garpixcms/garpix_admin_lock',
     author='Garpix LTD',
     author_email='info@garpix.com',
@@ -30,6 +30,6 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'garpixcms >= 1.7.0',
-    ],
+        'Django >= 1.11',
+    ]
 )
