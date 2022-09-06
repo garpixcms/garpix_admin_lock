@@ -25,10 +25,7 @@ class BaseLockingMixin(object):
             'page_lock_api_interval': int(API_INTERVAL)  # must be integer
         }
 
-        if (
-            data['is_locked'] and
-            data['page_lock_settings']['user_reference'] != data['locked_by']  # noqa: E501
-        ):
+        if (data['is_locked'] and data['page_lock_settings']['user_reference'] != data['locked_by']):
             # Adding message when page is locked.
             self._add_message(req, data)
 
@@ -71,10 +68,7 @@ class BaseLockingMixin(object):
         # Returns `True` if the current page is not locked by same user
         # otherwise returns `False`.
         result = cls._get_page_info_data(req)
-        if (
-            result['is_locked'] and
-            result['page_lock_settings']['user_reference'] != result['locked_by']  # noqa: E501
-        ):
+        if (result['is_locked'] and result['page_lock_settings']['user_reference'] != result['locked_by']):
             return True
 
         return False

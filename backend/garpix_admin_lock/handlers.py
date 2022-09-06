@@ -68,18 +68,10 @@ class PageLockHandler(object):
         data = self.model_class.get_data(self.page_settings)
 
         # Deactivate lock if user is locking current page.
-        if (
-            data is not None and
-            data['user_reference'] == self.page_settings['user_reference'] and
-            data['tab_counter'] == 1
-        ):
+        if (data is not None and data['user_reference'] == self.page_settings['user_reference'] and data['tab_counter'] == 1):
             self.model_class.deactivate(self.page_settings)
             return {'is_locked': False}
-        elif (
-            data is not None and
-            data['user_reference'] == self.page_settings['user_reference'] and
-            data['tab_counter'] >= 1
-        ):
+        elif (data is not None and data['user_reference'] == self.page_settings['user_reference'] and data['tab_counter'] >= 1):
             # Deactivate previous data.
             self.model_class.deactivate(self.page_settings)
             self.model_class.set_data(
@@ -180,13 +172,7 @@ class PageLockHandler(object):
             )
 
         # 2. Page is locked by another user or user can't open multiple tabs.
-        elif (
-            data is not None and
-            (
-                self.page_settings['user_reference'] != data['user_reference']
-                or not settings.CAN_OPEN_MORE_TABS
-            )
-        ):
+        elif (data is not None and (self.page_settings['user_reference'] != data['user_reference'] or not settings.CAN_OPEN_MORE_TABS)):
             is_locked = True
             locked_by = data['user_reference']
             reconnected = False
@@ -198,10 +184,7 @@ class PageLockHandler(object):
                 reconnect_in = dtime.seconds
 
         # 3. Page is locked by same user.
-        elif (
-            data is not None and
-            self.page_settings['user_reference'] == data['user_reference']
-        ):
+        elif (data is not None and self.page_settings['user_reference'] == data['user_reference']):
             is_locked = True
             locked_by = data['user_reference']
             tab_counter = data['tab_counter']

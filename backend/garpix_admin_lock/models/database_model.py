@@ -63,10 +63,7 @@ class DatabasePageLockModel(BasePageLockModel, models.Model):
         # Get the latest instance of `DatabasePageLockModel` and check
         # its existence.
         page_lock = page_locks.first()
-        if (
-            page_lock is None or
-            not isinstance(page_lock, cls)
-        ):
+        if (page_lock is None or not isinstance(page_lock, cls)):
             return None
 
         return {

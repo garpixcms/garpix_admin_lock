@@ -80,8 +80,7 @@ class PageLockAdminMixin(BaseLockingMixin):
 
         if self._is_locked(req):
             readonly_fields = list(readonly_fields) + list(
-                [field.name for field in self.opts.local_fields] +
-                [field.name for field in self.opts.local_many_to_many]
+                [field.name for field in self.opts.local_fields] + [field.name for field in self.opts.local_many_to_many]
             )
 
         return tuple(readonly_fields)
@@ -109,7 +108,7 @@ class PageLockAdminMixin(BaseLockingMixin):
             js=(
                 'js/page_lock.js',
             ),
-            css = {
+            css={
                 'all': ('css/page_lock.css',)
             }
         )
