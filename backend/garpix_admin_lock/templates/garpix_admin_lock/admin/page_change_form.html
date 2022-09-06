@@ -1,0 +1,12 @@
+{% extends 'admin/change_form.html' %}
+
+{% load static %}
+{% load page_lock_bar %}
+
+
+{% block footer %}
+    {{ block.super }}
+    <div class="g-page-lock">
+        {% page_lock_bar_plain %}
+    </div>
+{% endblock %}

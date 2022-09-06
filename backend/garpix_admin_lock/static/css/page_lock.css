@@ -1,0 +1,25 @@
+.g-page-lock {
+    margin: 0px 40px;
+    background: #f8f8f8;
+    color: #646464;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 12px 14px;
+}
+
+.g-page-lock__btns {
+    margin-top: 10px;
+}
+
+.g-page-lock__btns button {
+    background: #79aec8;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#page_lock_counter_display {
+    font-weight: bold;
+}
