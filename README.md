@@ -96,3 +96,7 @@ class ExampleAdmin(PageLockAdminMixin, admin.ModelAdmin):
     lock_changelist_view = False
     ...
 ```
+
+### Basis
+
+[django-admin-page-lock](https://github.com/Showmax/django-admin-page-lock)
