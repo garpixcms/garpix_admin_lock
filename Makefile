@@ -42,10 +42,13 @@ logs:
 ps:
 	docker-compose ps
 
-install:
+venv:
 	pipenv install
 	pipenv shell
+
+install:
 	docker-compose up -d
+	sleep 5
 	python3 backend/manage.py makemigrations
 	python3 backend/manage.py migrate
 	python3 backend/manage.py createsuperuser
