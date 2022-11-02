@@ -4,5 +4,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('page_lock/', include('garpix_admin_lock.urls')),
+    path('admin/page_lock/', include('garpix_admin_lock.urls')),
 ]

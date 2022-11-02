@@ -102,13 +102,15 @@ window.addEventListener("load", function () {
         };
 
         var call_get_page_info_data = function () {
-            var url = get_base_url() + '/page_lock/get_page_info/';
+            // var url = get_base_url() + '/page_lock/get_page_info/';
+            var url = get_base_url() + PAGE_LOCK_URL.get_page_info;
 
             return call_api(url);
         };
 
         var call_open_page_connection = function () {
-            var url = get_base_url() + '/page_lock/open_page_connection/';
+            // var url = get_base_url() + '/page_lock/open_page_connection/';
+            var url = get_base_url() + PAGE_LOCK_URL.open_page_connection;
 
             return call_api(url);
         };
@@ -168,7 +170,8 @@ window.addEventListener("load", function () {
         // Deactivate user leaving current page.
         $(window).on('beforeunload', function () {
             // When user click `REFRESH` button then page lock can not deactivate same user refreshing page.
-            var url = get_base_url() + '/page_lock/close_page_connection/';
+            // var url = get_base_url() + '/page_lock/close_page_connection/';
+            var url = get_base_url() + PAGE_LOCK_URL.close_page_connection;
             var data = {
                 'url': encodeURIComponent(get_full_url()),
                 'user_reference': user_reference,
