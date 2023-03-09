@@ -1,3 +1,7 @@
+### 1.2.0 (08.03.2023)
+
+- Removed `redirect_to_homepage`
+
 ### 1.1.0 - 1.1.1 (17.11.2022)
 
 - Url hardcode fixed
