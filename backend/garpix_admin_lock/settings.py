@@ -52,7 +52,7 @@ MESSAGES_DEFAUL = {
     'message_locked': _('Page is locked.'),
     'message_reload': _('You are the one who can edit. Click "RELOAD" button to stay on the page.'),  # noqa: E501
     'message_refresh': _('Click "REFRESH" button to start editting.'),
-    'message_problem': _('Something happened, you will be redirected to homepage.'),  # noqa: E501
+    'message_problem': _('Something happened. Check the correctness of the server company.'),  # noqa: E501
 }
 MESSAGES_REFERENCE = 'PAGE_LOCK_MESSAGES'
 MESSAGES = getattr(settings, MESSAGES_REFERENCE, MESSAGES_DEFAUL)

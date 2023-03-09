@@ -43,12 +43,6 @@ window.addEventListener("load", function () {
             return full_url_splitted[0] + '//' + full_url_splitted[2];
         };
 
-        var redirect_to_homepage = function () {
-            var homepage = data_to_process.page_lock_settings.homepage;
-            var homepage_url = get_base_url() + homepage;
-            $(location).attr('href', homepage_url)
-        };
-
         // Ajax function.
         var send_request = function (url, data, async = false) {
             var tmp = null;
@@ -94,8 +88,9 @@ window.addEventListener("load", function () {
             // When response is `null` then warn user by dialog and
             // redirect him to the homepage.
             if (!response) {
-                alert(messages.message_problem);
-                redirect_to_homepage();
+                $('#page_lock_message_display').text(messages.message_problem)
+                // alert(messages.message_problem);
+                // redirect_to_homepage();
             }
 
             return response;
@@ -143,7 +138,8 @@ window.addEventListener("load", function () {
 
             // Redirect to homepage when `reconnect_in` is equal to zero.
             if (data.reconnect_in == 0 && locked_by_me) {
-                redirect_to_homepage();
+                // redirect_to_homepage();
+                $('#page_lock_message_display').text(messages.message_problem)
             }
         };
 
