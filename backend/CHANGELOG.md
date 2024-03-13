@@ -1,3 +1,7 @@
+### 1.3.0 (13.03.2024)
+
+- `Django` < 5 version support added
+
 ### 1.2.0 (08.03.2023)
 
 - Removed `redirect_to_homepage`

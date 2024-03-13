@@ -8,7 +8,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='garpix_admin_lock',
-    version='1.2.0',
+    version='1.3.0',
     description='',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -30,6 +30,6 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'Django >= 1.11',
+        'Django >= 1.11, < 5',
     ]
 )

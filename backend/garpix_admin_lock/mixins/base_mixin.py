@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 import json
 
 from django.contrib import messages
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from garpix_admin_lock.settings import (
     API_INTERVAL,
     CAN_OPEN_MORE_TABS,
