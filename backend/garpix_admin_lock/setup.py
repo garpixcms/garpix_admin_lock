@@ -8,7 +8,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='garpix_admin_lock',
-    version='1.3.1',
+    version='1.3.2',
     description='',
     long_description=long_description,
     long_description_content_type='text/markdown',
