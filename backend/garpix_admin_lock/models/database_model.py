@@ -94,5 +94,5 @@ class DatabasePageLockModel(BasePageLockModel, models.Model):
     class Meta:
         ordering = ('locked_at',)
         app_label = 'garpix_admin_lock'
-        verbose_name = 'Page Lock'
-        verbose_name_plural = 'Page Locks'
+        verbose_name = 'Блокировка страниц | Page Lock'
+        verbose_name_plural = 'Блокировки страниц | Page Locks'
